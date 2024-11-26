@@ -11,7 +11,7 @@ class HtmlController {
     // @GetMapping : HTTP GET요청 처리(client -> server), 데이터 요청, 이를 Mapping
     @GetMapping
     fun blog(model: Model): String{
-        model["title"] = "Kotlin Demo"
+        model["title"] = "blog"
         return "blog"
     }
 }

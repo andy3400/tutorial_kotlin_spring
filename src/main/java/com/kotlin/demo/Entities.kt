@@ -1,10 +1,11 @@
 package com.kotlin.demo
 
+
 import java.time.LocalDateTime
 import jakarta.persistence.*
 
 @Entity
-data class Article(
+class Article(
     var title: String,
     var headline: String,
     var content: String,
@@ -14,7 +15,7 @@ data class Article(
     @Id @GeneratedValue var id: Long? = null)
 
 @Entity
-data class User(
+class User(
     var login: String,
     var firstname: String,
     var lastname: String,

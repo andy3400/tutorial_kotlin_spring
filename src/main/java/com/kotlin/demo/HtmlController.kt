@@ -15,7 +15,7 @@ class HtmlController(private val repository: ArticleRepository) {
     @GetMapping("/")
     fun blog(model: Model): String{
         model["title"] = "blog"
-        model["article"] = repository.findAllByOrderByAddressAtDesc().map {
+        model["article"] = repository.findAllByOrderByAddedAtDesc().map {
             it.render()
         }
         return "blog"
